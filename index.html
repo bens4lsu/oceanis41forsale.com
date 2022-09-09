@@ -6,6 +6,54 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
+        <link href="css/popup-slider.css" rel="stylesheet">		
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script type="text/javascript" src="js/smooth-scroll.js"></script>
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<script type="text/javascript" src="js/image-effect.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/excanvas.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/lightview.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/spinners.min.js"></script>
+        <style>
+            .lightview {
+                margin:12px;
+                display:inline-block;
+                vertical-align:middle;
+            }
+        </style>
+        
+        <script>
+        
+        $( document ).ready(function() {
+          $('.btn-slider').on('click', function() {
+            $('.sliderPop').show();
+            $('.ct-sliderPop-container').addClass('open');
+            $('.sliderPop').addClass('flexslider');
+            $('.sliderPop .ct-sliderPop-container').addClass('slides');
+
+            $('.sliderPop').flexslider({
+            selector: '.ct-sliderPop-container > .ct-sliderPop',
+            slideshow: false,
+            controlNav: false,
+            controlsContainer: '.ct-sliderPop-container'
+            });
+          });
+
+          $('.ct-sliderPop-close').on('click', function() {
+            $('.sliderPop').hide();
+            $('.ct-sliderPop-container').removeClass('open');
+            $('.sliderPop').removeClass('flexslider');
+            $('.sliderPop .ct-sliderPop-container').removeClass('slides');
+          });
+        });
+        
+        </script>
+
 
     	<title>For Sale: Beneteau Oceanis 41</title>
     	<link rel="icon" href="images/logo.png">
@@ -217,142 +265,16 @@
   		
 
 
-
-<!--
-			<div class="row" id="Menu">
-				<div class="col navMenu">
-	     		 	<h2 class="text-center" >~ Menu ~</h2>
-				</div>
-			</div>
-			<div class="row bg-light">
-				<div class="col-md-4" data-aos="slide-up">
-					<div class="card view zoom">
-  						<img class="card-img-top img-fluid " src="images/meat-menu.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">~ Meat Menu ~</h5>
-					    	<ul class="list-group list-group-flush">
-							    <li class="list-group-item">Bocconcini di carne in nido di sfoglia</li>
-							    <li class="list-group-item">Bruschette con maiale al curry</li>
-							 	<li class="list-group-item">Uova al prosciutto</li>
-							 	<li class="list-group-item">Vitello tonnato</li>
-							 	<li class="list-group-item">Fesa di tacchino marinata con olive</li>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-				<div class="col-md-4" data-aos="slide-up">
-					<div class="card">
-  						<img class="card-img-top img-fluid " src="images/fish-menu.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">~ Fish Menu ~</h5>
-					    	<ul class="list-group list-group-flush">
-							    <li class="list-group-item">Carpaccio di polpo</li>
-							    <li class="list-group-item">Cozze al verde</li>
-							 	<li class="list-group-item">Cocktail di gamberi</li>
-							 	<li class="list-group-item">Risotto alla crema di scampi</li>
-							 	<li class="list-group-item">Ravioli di pesce con crema di scampi</li>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-				<div class="col-md-4" data-aos="slide-up">
-					<div class="card">
-  						<img class="card-img-top img-fluid" src="images/menu-vegetarian.jpg">
-					  	<div class="card-body">
-					  		<h5 class="card-title">~ Vegetarian Menu ~</h5>
-					    	<ul class="list-group list-group-flush">
-							    <li class="list-group-item">Parmigiana di melanzane</li>
-							    <li class="list-group-item">Strudel con ricotta e spinaci</li>
-							 	<li class="list-group-item">Polpette di spinaci e ricotta</li>
-							 	<li class="list-group-item">Frittata di patate al forno</li>
-							 	<li class="list-group-item">Spaghetti con le polpettine vegetariane</li>
-							</ul>
-					  	</div>
-					</div>
-				</div>
-			</div>
--->
-			<!--- End of Menu -->
-			<!--- Start of Reservation-->
-
-<!--
-			<div class="row" id="Reservation">
-				<div class="col navMenu">
-	     		 	<h2 class="text-center">~ Reservation ~</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class=" col-lg-12 reserve-container" data-aos="fade-up">
-					<img class="img-fluid image-reserve" src="images/reserve.jpg">
-					<div class="reserve-text col-lg-12 ">
-						<h1 class="text-center">Timetables</h1>
-						<div class="row">
-							<div class="col-6">
-							   	<h2 class="text-center">Lunch</h2>
-							    <h5 class="text-center">12:00 - 15:00</h5>
-							</div>
-							<div class="col-6">
-							    <h2 class="text-center">Dinner</h2>
-							    <h5 class="text-center">19:30 - 23:30</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="row bg-light">
-				<div class="col">
-					<form>
-						<div class="form-row">
-						  	<div class="form-group col-6">
-						  		<h3>Reserve</h3>
-						  		<label for="inputDate"> Date</label>
-						  		<input type="date" class="form-control" id="inputDate" placeholder="Data gg/mm/aaaa">
-						  	</div>
-						  	<div class="form-group col-6">
-						  		<h3>Details</h3>
-						  		<label for="inputName"> Name</label>
-						  		<input type="text" class="form-control" id="inputName" placeholder="Name">
-						  	</div>
-						  	<div class="form-group col-6">
-						  		<label for="inputTime"> Timetables</label>
-						  		<input type="time" class="form-control" id="inputTime" placeholder="Timetables">
-						  	</div>
-						  	<div class="form-group col-6">
-						  		<label for="inputEmail"> Email</label>
-						  		<input type="email" class="form-control" id="inputEmail" placeholder="Email">
-						  	</div>
-						  	<div class="form-group col-6">
-						  		<label for="inputNumber"> Number of Guests</label>
-						  		<input type="number" class="form-control" id="inputNumber" placeholder="Number of Guests">
-						  	</div>
-						  	<div class="form-group col-6">
-						  		<label for="inputCel"> Phone</label>
-						  		<input type="tel" class="form-control" id="inputCel" placeholder="Phone">
-						  	</div>
-  							<div class="form-group col-12">
-  								<label for="inputComment"> Further requests</label>
-								<textarea class="form-control" rows="4" id="inputComment" placeholder="Further requests"></textarea>
-							</div>
-					 	</div>
-						<div class="row">
-					  		<div class="col-md-4 col-md-offset-4">
-					  			<button type="submit" class="btn btn-secondary btn-block">Reserve</button>
-					  		</div>
-					  	</div>
-					</form>
-				</div>
-			</div>
-			
--->
 			<!--- End of Reserve -->
 			<!--- Start of Our Location -->
 			<div class="row" id="MorePhotos">
 				<div class="col navMenu">
 					<h2 class="text-center">~ More Photos ~</h2>
+				
+				
 				</div>
 			</div>
-			
+			    
 			<div class="row" id="Contact">
 				<div class="col navMenu">
 					<h2 class="text-center">~ Contact Us ~</h2>
@@ -370,14 +292,6 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-		<script type="text/javascript" src="js/map.js"></script>
-		<script type="text/javascript" src="js/smooth-scroll.js"></script>
-		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-		<script type="text/javascript" src="js/image-effect.js"></script>
-	    </script>
+
   	</body>
 </html>
