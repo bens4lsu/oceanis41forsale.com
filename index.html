@@ -7,7 +7,6 @@
 		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
-        <link href="css/popup-slider.css" rel="stylesheet">		
 		
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -15,10 +14,12 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		<script type="text/javascript" src="js/smooth-scroll.js"></script>
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-		<script type="text/javascript" src="js/image-effect.js"></script>
-        <script language="javascript" type="text/javascript" src="./js/excanvas.js"></script>
+<!-- 		<script type="text/javascript" src="js/image-effect.js"></script> -->
+        <!-- 
+<script language="javascript" type="text/javascript" src="./js/excanvas.js"></script>
         <script language="javascript" type="text/javascript" src="./js/lightview.js"></script>
         <script language="javascript" type="text/javascript" src="./js/spinners.min.js"></script>
+ -->
         <style>
             .lightview {
                 margin:12px;
@@ -26,33 +27,6 @@
                 vertical-align:middle;
             }
         </style>
-        
-        <script>
-        
-        $( document ).ready(function() {
-          $('.btn-slider').on('click', function() {
-            $('.sliderPop').show();
-            $('.ct-sliderPop-container').addClass('open');
-            $('.sliderPop').addClass('flexslider');
-            $('.sliderPop .ct-sliderPop-container').addClass('slides');
-
-            $('.sliderPop').flexslider({
-            selector: '.ct-sliderPop-container > .ct-sliderPop',
-            slideshow: false,
-            controlNav: false,
-            controlsContainer: '.ct-sliderPop-container'
-            });
-          });
-
-          $('.ct-sliderPop-close').on('click', function() {
-            $('.sliderPop').hide();
-            $('.ct-sliderPop-container').removeClass('open');
-            $('.sliderPop').removeClass('flexslider');
-            $('.sliderPop .ct-sliderPop-container').removeClass('slides');
-          });
-        });
-        
-        </script>
 
 
     	<title>For Sale: Beneteau Oceanis 41</title>
@@ -282,16 +256,10 @@
 			</div>	
 		</div>
 		</div>
-		<footer class="container">
-			<div class= "row only-mobile">
-				<div class="col-6">
-					<a class="btn btn-primary btn-block text-center" href="tel:++390000000"><i class="fa fa-phone" aria-hidden="true"></i> Call</a>
-				</div>
-				<div class="col-6">
-					<a class="btn btn-success btn-block text-center" href="https://api.whatsapp.com/send?phone=+390000000"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a>
-				</div>
-			</div>
-		</footer>
+			
+		</div> 
+		<div class="container" style="min-height:25px; background-color: #ddd;">
+
 
   	</body>
 </html>
