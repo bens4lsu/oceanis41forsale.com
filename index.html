@@ -45,10 +45,10 @@
 					    	<a class="nav-link" href="#History">Features and Specifications</a>
 					    </li>
 					    <li class="nav-item">
-					    	<a class="nav-link" href="#Deck">More Pictures</a>
+					    	<a class="nav-link" href="#divMorePhotos">More Pictures</a>
 					    </li>
 					    <li class="nav-item">
-					    	<a class="nav-link" href="#Reservation">How to Propose</a>
+					    	<a class="nav-link" href="#divContact">Contact Us</a>
 					    </li>
 				    </ul>
 				</div>
@@ -98,10 +98,11 @@
 	     		 	<h2 class="text-center" >~ For Immediate Sale ~</h2>
 	     		 	<p>This single-owner boat has been lovingly sailed and consistently maintained by a single owner.  Fresh off a major refit, owners are moving to a slightly larger boat to continue their cruising adventures.</p>
 	     		 	<p>In the past two years, the boat has been fitted with all new electronics, a new generator, all new running rigging, and many other small repairs.  So much of this boat is brand new!</p>
-	     		 	<p>The boat is located in the New Orleans area.  You must see to believe.</p>
+	     		 	<p>If has two air conditioners that work great and can be powered from shore or from the onboard generator.</p>
+	     		 	<p id="History">The boat is located in the New Orleans area.  You must see to believe.</p>
 	    		</div>
   			</div>
-  			<div class="row bg-light" id="History">
+  			<div class="row bg-light">
   				<div class="col-md-6">
   					<h3>History</h3>
   					<ul>
@@ -171,10 +172,6 @@
                         <li>Yanmar 40 hp diesel motor, well-maintained</li>
                         <li>Three year old sail drive transmission</li>
                         <li>Bow thrusters</li>
-                        <li>Electric winch with controllers on bow and in cockpit•	Brand new generator, installed Spring 2022</li>
-                        <li>Yanmar 40 hp diesel motor, well-maintained</li>
-                        <li>Three year old sail drive transmission</li>
-                        <li>Bow thrusters</li>
                         <li>Electric winch with controllers on bow and in cockpit</li>
   					</ul>
   				</div>
@@ -186,6 +183,7 @@
   					<h3>Cabin</h3>
   					<ul>
                         <li>Two-cabin layout.  Huge forward cabin with ample storage and small desk</li>
+                        <li>Two air conditioners that keep the interior frosty, even in Louisiana Summers</li>
                         <li>Standard aft cabin with large locker and storage</li>
                         <li>Large pantry room</li>
                         <li>Folding cokpit table with built in containers for storage or use as ice chests</li>
@@ -235,7 +233,7 @@
 
 			<!--- End of Reserve -->
 			<!--- Start of Our Location -->
-			<div class="row" id="MorePhotos">
+			<div class="row" id="divMorePhotos">
 				<div class="col navMenu">
 					<h2 class="text-center">~ More Photos ~</h2>
 				
@@ -248,7 +246,11 @@
 			    
 			<div class="row" id="Contact">
 				<div class="col navMenu">
-					<h2 class="text-center">~ Contact Us ~</h2>
+				    <h2 class="text-center">~ $239,000 ~</h2>
+					<h2 class="text-center" id="divContact">~ Contact Info ~</h2>
+					<p style="text-align: center">Ben Schultz</p>
+					<p style="text-align: center">Email: <a href="mailto:captainben@sailvelvetelvis.com">captainben@sailvelvetelvis.com</a></p>
+					<p style="text-align: center">Phone or SMS:  +1 (225) 205-2437</p>
 				</div>
 			</div>	
 		</div>
@@ -287,23 +289,188 @@
                 // before navigating to different slides (Optional)
                 // You can find caption animation demo on the captions demo page
                 slideDelay: 400,
+                height: "860px",
                 dynamicEl: [
                     {
                         src: 'images/gal/IMG_6759.jpeg',
-                        thumb: 'images/gal/_thb_IMG_6759.jpeg',
-                        subHtml: `<div class="lightGallery-captions">
-                            <h4>Caption 1</h4>
-                            <p>Description of the slide 1</p>
-                        </div>`,
+                        thumb: 'images/gal/_thb_IMG_6759.jpeg'
                     },
                     {
                         src: 'images/gal/IMG_7912.jpeg',
-                        thumb: 'images/gal/IMG_7912.jpeg',
+                        thumb: 'images/gal/_thb_IMG_7912.jpeg',
                         subHtml: `<div class="lightGallery-captions">
-                            <h4>Caption 2</h4>
-                            <p>Description of the slide 2</p>
+                            <h4>Getting a new bottom, 2021</h4>
                         </div>`,
-                    }
+                    },
+                    {
+                        src: 'images/gal/IMG_20190717_101828_5703.jpg',
+                        thumb: 'images/gal/_thb_IMG_20190717_101828_5703.jpg'
+                    },
+                    {
+                        src: 'images/gal/IMG_9635.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9635.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Aft Cabin 1</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9636.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9636.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Aft Cabin 2</h4>
+                            <p>Large hanging locker, and in-shelf storage for all of your belongings</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9638.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9638.jpeg',
+                        subHtml: `<div class="lightGallery-captions" style="color: #0d073d;">
+                            <h4>Aft Cabin 3</h4>
+                            <p>More storage</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9639.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9639.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Aft Cabin 4</h4>
+                            <p>View into the saloon</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9640.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9640.jpeg',
+                        subHtml: `<div class="lightGallery-captions" style="color: #0d073d;">
+                            <h4>Head 1</h4>
+                            <p>Large shower to the aft, head, and sink.  Storage beneath sink and behind mirrors.  Long rack inside the shower area, and plenty of hooks for towels.</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9642.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9642.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Saloon 1</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9643.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9643.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Saloon/Galley</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9645.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9645.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Forward Cabin 1</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9646.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9646.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Forward Cabin 2</h4>
+                            <p>Hanging locker and cabinets on port side of the cabin</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9647.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9647.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Forward Cabin 3</h4>
+                            <p>Hanging locker, cabinets, and desk on the starboard side of the cabin</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9648.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9648.jpeg',
+                        subHtml: `<div class="lightGallery-captions" style="color: #0d073d;">
+                            <h4>Saloon 2</h4>
+                            <p>Chart table/seats for entertaining</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9649.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9649.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Saloon 3</h4>
+                            <p>Reading light, VHF, and thermostat at the chart table</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9651.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9651.jpeg',
+                        subHtml: `<div class="lightGallery-captions" style="color: #0d073d;">
+                            <h4>Main electrical panel</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9652.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9652.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Generator/Shore power switches</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9654.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9654.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>House and Engine Battery switches</h4>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_9662.jpeg',
+                        thumb: 'images/gal/_thb_IMG_9662.jpeg',
+                        subHtml: `<div class="lightGallery-captions" style="color: #0d073d;">
+                            <h4>Engine Access</h4>
+                            <p>Engine is accessible from under the companionway stairs, and also through side panels in the aft cabin and pantry room.</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_20180611_123448_P6110372.JPG',
+                        thumb: 'images/gal/_thb_IMG_20180611_123448_P6110372.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20180626_125136_P6260598.JPG',
+                        thumb: 'images/gal/_thb_IMG_20180626_125136_P6260598.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20180626_140814_P6260604.JPG',
+                        thumb: 'images/gal/_thb_IMG_20180626_140814_P6260604.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190527_180442_P5271015.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190527_180442_P5271015.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190527_180450_P5271016.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190527_180450_P5271016.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190528_192452_5588.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190528_192452_5588.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190609_120742_P6091120.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190609_120742_P6091120.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190610_080418_0676.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190610_080418_0676.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190619_133126_P6191374.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190619_133126_P6191374.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190619_133132_P6191375.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190619_133132_P6191375.JPG'
+                    },
+                    {
+                        src: 'images/gal/IMG_20190630_122538_P6301756.JPG',
+                        thumb: 'images/gal/_thb_IMG_20190630_122538_P6301756.JPG'
+                    },
                 ],
                 plugins: [lgThumbnail],
             });
