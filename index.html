@@ -7,20 +7,24 @@
 		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://theskinnyonbenny.com/lightview.css" type="text/css">
-
-
-        <style>
-            .lightview {
-                margin:12px;
-                display:inline-block;
-                vertical-align:middle;
-            }
-        </style>
-
+        <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
 
 
     	<title>For Sale: Beneteau Oceanis 41</title>
+    	
+    	<style>
+    	    .inline-gallery-container {
+                width: 100%;
+
+                // set 60% height
+                height: 0;
+                padding-bottom: 65%;
+            }
+            
+            .lg-backdrop, .lg-outer .lg-thumb-outer{
+                background-color: whitesmoke;
+            }
+        </style>
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50">
 	  	<div id="Welcome">
@@ -129,7 +133,7 @@
                         <li>Transom folds down to large swim platform</li>
                         <li>Huge davit for dinghy or other storage</li>
                         <li>New bilge pump</li>
-                        <li>New bottom paint in 2021</li>
+                        <li>New bottom paint and zincs in 2021</li>
                         <li>Floodlight on spreader to wash the deck in light at night</li>
 
   					</ul>
@@ -235,9 +239,9 @@
 				<div class="col navMenu">
 					<h2 class="text-center">~ More Photos ~</h2>
 				
-				
-				<a class="lightview" href="./images/gal/IMG_6759.jpeg" data-lightview-caption="" data-lightview-group="group1" onclick="event.preventDefault();">Photo Tour</a>
+				    <div id="inline-gallery-container" class="inline-gallery-container"></div>
 
+				
 				
 				</div>
 			</div>
@@ -259,9 +263,54 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		<script type="text/javascript" src="js/smooth-scroll.js"></script>
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-		<script type="text/javascript" src="js/image-effect.js"></script>        <script language="javascript" type="text/javascript" src="./js/excanvas.js"></script>
-        <script language="javascript" type="text/javascript" src="./js/lightview.js"></script>
-        <script language="javascript" type="text/javascript" src="./js/spinners.min.js"></script>
+		<script type="text/javascript" src="js/image-effect.js"></script> 
+		<script src="js/lightgallery.min.js"></script>
+		<script src="js/lg-thumbnail.min.js"></script>
 
+        <script>
+        
+            const lgContainer = document.getElementById('inline-gallery-container');
+            const inlineGallery = lightGallery(lgContainer, {
+                container: lgContainer,
+                dynamic: true,
+                // Turn off hash plugin in case if you are using it
+                // as we don't want to change the url on slide change
+                hash: false,
+                // Do not allow users to close the gallery
+                closable: false,
+                // Add maximize icon to enlarge the gallery
+                showMaximizeIcon: true,
+                // Append caption inside the slide item
+                // to apply some animation for the captions (Optional)
+                appendSubHtmlTo: '.lg-item',
+                // Delay slide transition to complete captions animations
+                // before navigating to different slides (Optional)
+                // You can find caption animation demo on the captions demo page
+                slideDelay: 400,
+                dynamicEl: [
+                    {
+                        src: 'images/gal/IMG_6759.jpeg',
+                        thumb: 'images/gal/_thb_IMG_6759.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Caption 1</h4>
+                            <p>Description of the slide 1</p>
+                        </div>`,
+                    },
+                    {
+                        src: 'images/gal/IMG_7912.jpeg',
+                        thumb: 'images/gal/IMG_7912.jpeg',
+                        subHtml: `<div class="lightGallery-captions">
+                            <h4>Caption 2</h4>
+                            <p>Description of the slide 2</p>
+                        </div>`,
+                    }
+                ],
+                plugins: [lgThumbnail],
+            });
+
+            // Since we are using dynamic mode, we need to programmatically open lightGallery
+            inlineGallery.openGallery();
+
+        </script>
   	</body>
 </html>
